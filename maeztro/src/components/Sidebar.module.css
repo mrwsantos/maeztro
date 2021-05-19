@@ -1,0 +1,35 @@
+.sidebar {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 350px;
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  border: 1px solid #ddd;
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    grid-row: 2 / -1;
+    grid-column: 1 / 2;
+
+    width: 4rem;
+    height: initial;
+    max-width: initial;
+    transform: initial;
+    left: initial;
+    bottom: initial;
+    position: initial;
+
+    border: none;
+    border-right: 1px solid #ddd;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+  }
+}

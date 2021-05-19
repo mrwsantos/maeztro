@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto+Slab:wght@300;400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #333;
+  font-family: var(--main-font-1);
+
+  /* VARIAVEIS */
+  --main-font-1: 'Roboto Slab', sans-serif;
+  --main-font-2: 'Bree Serif', serif;
+  --color-1: #fff833;
+  --color-2: #fea;
+  --color-3: #ddd;
+  --color-4: #222;
+}
+
+main {
+  min-height: 100vh;
+  /* padding-bottom: 5rem; */
+  display: grid;
+  grid-template-rows: 4rem 1fr;
+
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  main {
+    grid-template-columns: 4rem 1fr;
+  }
+}
+
+.mainContent {
+  grid-row: 2 / -1;
+  grid-column: 2 / -1;
+
+  /* margin: 1rem; */
+  margin-bottom: 0;
+  background-color: #f3f3f3;
+}
+
+@media (min-width: 991px) {
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-4);
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  display: block;
+  font-size: 1rem;
+  font-family: var(--main-font-1);
+}
+
+.container {
+  max-width: 50rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--main-font-2);
+  line-height: 1;
+  font-size: 3rem;
+  margin: 1rem 0;
+  position: relative;
+  display: inline-block;
+}
+
+.title::before,
+.title::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-1);
+
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  z-index: -1;
+}
+
+.title::after {
+  top: 0px;
+  right: -30px;
+}
+
+.animeScale {
+  opacity: 0;
+  transform: scale(0);
+  animation: animeScale 0.3s forwards;
+}
+
+@keyframes animeScale {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.animeFadeIn {
+  opacity: 0;
+  animation: animeFadeIn 1s forwards;
+}
+
+@keyframes animeFadeIn {
+  to {
+    opacity: 1;
+  }
+}

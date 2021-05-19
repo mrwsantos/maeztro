@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 23,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "dsadsa"
+  },
+  "users": [
+    {
+      "username": "will",
+      "email": "will@gmail.com",
+      "password": "123",
+      "id": "Wm80BMm"
+    },
+    {
+      "username": "ana",
+      "email": "ana@banana.com",
+      "password": "456",
+      "id": "7H_I8Qa"
+    },
+    {
+      "username": "dudu",
+      "email": "dudu@gmail.com",
+      "password": "456",
+      "id": "H5n1i4l"
+    }
+  ]
+}
