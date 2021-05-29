@@ -1,0 +1,65 @@
+.curso {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.conteudoCurso h1,
+.conteudoCurso h2 {
+  margin: 1rem 0;
+}
+
+.nomeCurso {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.conteudoCurso p {
+  display: block;
+  color: #444;
+  margin: 1rem 0;
+}
+
+.conteudoCurso a {
+  text-decoration: underline;
+}
+
+.conteudoCurso li {
+  list-style: initial;
+}
+
+.conteudoCurso img {
+  margin: 0 auto;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.conteudoCurso caption {
+  margin-bottom: 1rem;
+}
+
+.conteudoCurso thead {
+  background-color: #222;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.conteudoCurso table {
+  margin: 1rem auto;
+  text-align: center;
+  border: 1px solid #222;
+}
+
+.conteudoCurso iframe {
+  max-width: 100%;
+  width: 100%;
+  min-height: 400px;
+  display: block;
+}
+
+.conteudoCurso blockquote {
+  font-style: italic;
+  font-size: 0.8rem;
+}

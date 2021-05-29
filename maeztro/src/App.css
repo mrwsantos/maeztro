@@ -111,6 +111,29 @@ input {
   right: -30px;
 }
 
+/* PRIORIDADE DAS FAQS */
+.prioridade.alta {
+  background-color: firebrick;
+}
+/* STATUS DAS FAQS */
+.statusFaq.aberto {
+  color: limegreen;
+}
+.statusFaq.aberto::before {
+  background-color: limegreen;
+}
+.statusFaq.fechado {
+  color: #ccc;
+}
+.statusFaq.fechado::before {
+  background-color: #ccc;
+}
+
+/* filtro pesquisa */
+.hide {
+  display: none !important;
+}
+
 .animeScale {
   opacity: 0;
   transform: scale(0);
@@ -132,5 +155,49 @@ input {
 @keyframes animeFadeIn {
   to {
     opacity: 1;
+  }
+}
+
+.nota.alta {
+  order: -1;
+}
+
+.nota:hover .inputResposta {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nota:hover .reactions,
+.reactions.active {
+  opacity: 1;
+  transform: translateX(-50%) translateY(10px);
+}
+
+/* CLOSE DOCS */
+ul.closed {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+h3.active span {
+  font-size: 0;
+}
+h3.active span::before {
+  content: 'ᐁ';
+  display: block;
+  font-size: 1rem;
+}
+
+/* MENU EXPLORADOR NO MOBILE */
+@media (max-width: 991px) {
+  aside {
+    top: 0;
+    z-index: 99999999;
+    padding-top: 0 !important;
+    overflow-x: hidden !important;
+  }
+  aside.active {
+    left: 0 !important;
   }
 }

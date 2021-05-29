@@ -1,5 +1,5 @@
-import React, { Children } from 'react';
-import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET, CHECK_USER } from './Api';
+import React from 'react';
+import { USER_GET } from './Api';
 import { useNavigate } from 'react-router-dom';
 
 export const UserContext = React.createContext();
@@ -31,7 +31,7 @@ export const UserStorage = ({ children }) => {
     const json = await response.json();
     setData(json);
     setLogin(true);
-    console.log('GET USER: ', json);
+    // console.log('GET USER: ', json);
   }
 
   async function userLogin(user, pass) {
@@ -52,13 +52,16 @@ export const UserStorage = ({ children }) => {
       //SE TIVER TUDO OK
       if (checkName[0] && checkPass[0]) {
         setData(json);
-        console.log(json);
+        // console.log(json);
 
         window.localStorage.setItem('userLoggedIn', [
           json[0].id,
           json[0].username,
-          json[0].email
+          json[0].email,
+          json[0].imgUser,
+          json[0].type
         ]);
+        await getUser(json[0].id);
         timeoutRef.current = setTimeout(() => setLogin(true), 1000);
       } else {
         setError('Dados inválidos!');
@@ -75,12 +78,12 @@ export const UserStorage = ({ children }) => {
   React.useEffect(() => {
     async function autoLogin() {
       const loggedIn = window.localStorage.getItem('userLoggedIn');
-
       if (loggedIn) {
+        var split = loggedIn.split(',');
         try {
           setError(null);
           setLoading(true);
-          await getUser(loggedIn[0]);
+          await getUser(split[0]);
         } catch (err) {
           userLogout();
         } finally {

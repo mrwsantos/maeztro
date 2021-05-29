@@ -8,11 +8,11 @@
   padding: 0.8rem 1.2rem;
   box-sizing: border-box;
   transition: all 0.2s;
+  outline: none;
   min-width: 8rem;
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
   outline: none;
   filter: brightness(0.8);
 }

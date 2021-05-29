@@ -1,0 +1,16 @@
+.inputAnuncio {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.inputAnuncio textarea {
+  resize: none;
+  flex: 1;
+}
+
+.inputAnuncio textarea {
+  resize: none;
+  flex: 1;
+}

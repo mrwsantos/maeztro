@@ -1,0 +1,172 @@
+.home {
+  min-height: 80vh;
+}
+
+.homeActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.formAnuncio {
+}
+
+.faq {
+  padding: 0.5rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-top: 0.5rem;
+}
+
+.faqActions {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pergunta {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+
+  background-color: white;
+  border: 1px solid #ccc;
+
+  padding: 1rem;
+  padding-bottom: 3rem;
+  margin: 0.5rem;
+  /* height: 300px; */
+  transition: height 0.5s;
+  min-width: 400px;
+}
+
+.prioridade {
+  width: 40px;
+  height: 40px;
+  display: block;
+  transform: rotate(45deg);
+  font-size: 0;
+  /* background-color: limegreen; */
+
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+
+.categoria {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  background-color: var(--color-1);
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+}
+
+.statusFaq {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  font-size: 0.8rem;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.statusFaq::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+.usuarioPerguntaDate {
+  font-size: 0.7rem;
+}
+
+.usuarioPerguntaData {
+  display: flex;
+  align-items: center;
+}
+
+.usuarioPerguntaImg {
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-1);
+  background-color: #777;
+}
+
+.usuarioPerguntaNome {
+  color: #777;
+
+  padding: 0.1rem 0.3rem;
+  display: inline-block;
+  margin: 5px 0;
+  text-transform: capitalize;
+}
+
+.respostas {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  background-color: #eee;
+}
+
+.usuarioRespostaDate {
+  font-size: 0.6rem;
+}
+
+.usuarioRespostaData {
+  display: flex;
+  align-items: center;
+}
+
+.usuarioRespostaNome {
+  margin-right: 0.5rem;
+  text-transform: capitalize;
+}
+
+.resposta {
+  color: #555;
+}
+
+/* onde vai os comentarios das perguntas */
+.wrapperComments {
+  margin-top: 0.5rem;
+  height: 170px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+}
+.wrapperComments::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa;
+}
+.wrapperComments::-webkit-scrollbar-thumb {
+  background: var(--color-4);
+}
+/* onde vai os comentarios das perguntas */
+
+.semResposta {
+  color: #bbb;
+  margin: 1rem auto;
+  max-width: 200px;
+  text-align: center;
+  font-style: italic;
+}

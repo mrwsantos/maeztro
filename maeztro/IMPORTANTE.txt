@@ -1,0 +1,2 @@
+Foi utilizado o typicode json-server (https://github.com/typicode/json-server):
+1. Para realizar testes, inicie o json-server na porta 3004. Dessa forma: json-server --watch db.json --port 3004

@@ -1,0 +1,45 @@
+.filterWrapper {
+  display: flex;
+  align-items: center;
+  height: 46.5px;
+  width: 40%;
+  margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .filterWrapper {
+    width: 100%;
+  }
+}
+
+.filterWrapper * {
+  margin: 0 !important;
+}
+
+.filterWrapper label {
+  display: none;
+}
+
+.filterWrapper > div {
+  width: 100%;
+}
+
+.filterWrapper input {
+  padding: 5px;
+  height: 46.5px;
+  flex: 1;
+}
+
+.filterWrapper button {
+  padding: 5px 15px;
+  height: 100%;
+  min-width: initial;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filterWrapper svg {
+  width: 20px;
+}

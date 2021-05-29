@@ -1,48 +1,10 @@
-export const API_URL = 'https://dogsapi.origamid.dev/json';
-
-export function TOKEN_POST(body) {
-  return {
-    url: API_URL + '/jwt-auth/v1/token',
-    options: {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body)
-    }
-  };
-}
-
-export function TOKEN_VALIDATE_POST(token) {
-  return {
-    url: API_URL + '/jwt-auth/v1/token/validate',
-    options: {
-      method: 'POST',
-      headers: {
-        Authorization: 'Bearer ' + token
-      }
-    }
-  };
-}
+// USER -----------------------------------------------------------
 
 export function USER_GET(id) {
   return {
     url: `http://localhost:3004/users?id=${id}`,
     options: {
       method: 'GET'
-    }
-  };
-}
-
-export function USER_POST(body) {
-  return {
-    url: API_URL + '/api/user',
-    options: {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body)
     }
   };
 }
@@ -56,6 +18,37 @@ export function USER_CREATE(body) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(body)
+    }
+  };
+}
+// USER -----------------------------------------------------------
+
+// FAQ ------------------------------------------------------------
+export function FAQ_GET() {
+  return {
+    url: `http://localhost:3004/faqs`,
+    options: {
+      method: 'GET'
+    }
+  };
+}
+
+// ANUNCIO -------------------------------
+export function ANN_GET() {
+  return {
+    url: `http://localhost:3004/announcements`,
+    options: {
+      method: 'GET'
+    }
+  };
+}
+
+//DOCS
+export function ASIDEDOCS_GET() {
+  return {
+    url: `http://localhost:3004/asidedocs`,
+    options: {
+      method: 'GET'
     }
   };
 }

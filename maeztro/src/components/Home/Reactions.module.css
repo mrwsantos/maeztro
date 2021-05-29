@@ -1,0 +1,36 @@
+.reactions {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+
+  display: flex;
+  align-items: center;
+
+  transition: all 0.4s;
+  transform: translateX(-50%) translateY(100px);
+  opacity: 0;
+}
+
+.reactions > div {
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.reactions > div:hover i {
+  transform: scale(1.3);
+}
+
+.reactions i {
+  font-style: normal;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: block;
+}
+
+.reactions span {
+  font-size: 0.7rem;
+  display: block;
+  margin-left: 5px;
+}

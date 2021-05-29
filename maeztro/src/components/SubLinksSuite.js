@@ -2,34 +2,36 @@ import React from 'react';
 import styles from './SubLinksSuite.module.css';
 import { Link } from 'react-router-dom';
 
-import { ReactComponent as IconAmazing } from '../Assets/amazing.svg';
-import { ReactComponent as IconEditor } from '../Assets/editor.svg';
-import { ReactComponent as IconHelp } from '../Assets/help.svg';
-import { ReactComponent as IconDns } from '../Assets/web.svg';
-import { ReactComponent as IconAnalytics } from '../Assets/analytics.svg';
-import { ReactComponent as IconSkuColor } from '../Assets/skucolor.svg';
+import { ReactComponent as IconAmazing } from '../Assets/icons/icon-amazing.svg';
+import { ReactComponent as IconEditor } from '../Assets/icons/icon-editor.svg';
+import { ReactComponent as IconHelp } from '../Assets/icons/icon-help.svg';
+import { ReactComponent as IconDns } from '../Assets/icons/icon-web.svg';
+import { ReactComponent as IconAnalytics } from '../Assets/icons/icon-analytics.svg';
+import { ReactComponent as IconSkuColor } from '../Assets/icons/icon-skucolor.svg';
 
 const SubLinksSuite = () => {
   return (
     <div className={styles.suite} to="/" aria-label="">
       MZ Suite
       <ul className={styles.suiteDropdown}>
-        <Link
+        <a
           className={styles.suiteDropdownItem}
-          to="/suite/amazing-menu"
+          href="http://www.quatrodigital.com.br/amazing_menu/"
+          target="_blank"
           aria-label=""
         >
           <IconAmazing />
           Amazing Menu
-        </Link>
-        <Link
+        </a>
+        <a
           className={styles.suiteDropdownItem}
-          to="/suite/editor"
+          href="http://www.quatrodigital.com.br/editor/"
+          target="_blank"
           aria-label=""
         >
           <IconEditor />
           Editor
-        </Link>
+        </a>
         <Link
           className={styles.suiteDropdownItem}
           to="/suite/dns-validator"

@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
-import Api from './api/Api';
 import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import { UserStorage } from './UserContext';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
-import Note from './components/Note';
+import Docs from './components/Docs/Docs';
+import Faq from './components/FAQ/Faq';
+import Courses from './components/Courses/Courses';
+import Curso from './components/Courses/Curso';
 
 const App = () => {
   return (
@@ -21,10 +22,13 @@ const App = () => {
           <section className="mainContent">
             <Routes>
               <Route path="/home" element={<Home />} />
+              <Route path="/documentacao" element={<Docs />} />
+              <Route path="/faqs" element={<Faq />} />
+              <Route path="/cursos" element={<Courses />} />
+              <Route path="/curso/:nomeCurso" element={<Curso />} />
               <Route path="/*" element={<Login />} />
-              <Route path="/note/*" element={<Note />} />
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
           </section>
         </UserStorage>
       </BrowserRouter>
